@@ -13,11 +13,11 @@ const corsOptions ={
    optionSuccessStatus:200,
 }
 
+const app = express();
 app.use(cors(corsOptions))
 
 
 const PORT = process.env.PORT || 5000;
-const app = express();
 // app.use(
 //     express.urlencoded({ extended: true })
 // );
