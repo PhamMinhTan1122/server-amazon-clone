@@ -1,7 +1,6 @@
 //IMPORT PACKAGE
-const express = require("express");
+const express = require('express');
 const mongoose = require('mongoose');
-
 //IMPORT FROM OTHER FILES
 const authRouter = require('./routers/auth');
 const DB = "mongodb+srv://minhtan:masterminhtan@cluster0.lczbvig.mongodb.net/?retryWrites=true&w=majority"

@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-
+const mongoose = require('mongoose')
 const userSchema = mongoose.Schema({
     name: {
         required: true,
@@ -13,10 +12,10 @@ const userSchema = mongoose.Schema({
         validate: {
             validator: (value) => {
                 const re =
-                    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                    /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
                 return value.match(re);
             },
-            message: 'Please enter a valid email address',
+            message: 'Ong anh co biet cau truc cua email khong',
 
         }
     },
